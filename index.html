@@ -42,15 +42,50 @@
       font-family: Garamond, serif;
       border: white;
     }
+    #neinBtn{
+      position: absolute;
+      cursor: not-allowed;
+    }
+    .button-container {
+      height: 200px;
+      margin-top: 50px;
+    }
   </style>
 
-    
+  <script>
+    let klickZaehler = 0;
+    function wieOftNein() {
+      klickZaehler++;
+      const jaButton = document.getElementByID('jaBtn');
+      const neinButton = document.getElementByID('neinBtn');
+
+      const x = Math.random() * (window.innerWidth - 200);
+      const y = Math.random() * (window.innerHeight - 200);
+
+      neinButton.style.left = x + 'px';
+      neinButton.style.top = y + 'px';
+
+      if (Klickzaehler === 1) {
+        alter('U sure about that? :(");
+              neinButton.innerHTML = 'Ganz sicher?';
+      } else {
+        neinButton.innerHTML = 'TRY ME, MF!';
+      }
+
+      let neueGroesse = 1 + klickZaehler * 0.5);
+      jaButton.style.transform = `scale($neueGroesse});
+      }
+      
+  </script>  
   </head>
+  
   <body>
     <h1>Will you be my Valentine?</h1>
     <div class="heart">&lt;3</div>
     <img src="IMG20250412222010.jpg" alt="Mein Bild">
-    <button class="button" onclick="alert('That\'s what I thought, bitch')">Yes! &lt;3</button> 
-    <button class="button">"No! :("</button>
+    <div vlass="button-container">
+    <button id="jaBtn" class="button" onclick="alert('That\'s what I thought, bitch')">Yes! &lt;3</button> 
+    <button id=neinBtn" class="button" onmouseover="neinGedrueckt()" onclick"neinGedrueckt()">"No! :("</button>
   </body>
+
 </html>
