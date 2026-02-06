@@ -64,12 +64,14 @@
       const neinButton = document.getElementById('neinBtn');
 
       neinButton.style.position = 'absolute';
+      const padding = 150;
 
-      const x = Math.random() * (window.innerWidth - 300);
-      const y = Math.random() * (window.innerHeight - 300);
+      const x = Math.random() * (window.innerWidth - padding*2) + padding;
+      const y = Math.random() * (window.innerHeight - padding*2) + padding;
 
       neinButton.style.left = x + 'px';
       neinButton.style.top = y + 'px';
+      neinButton.style.zIndex = '1000';
 
       if (klickZaehler === 1) {
         alert('U sure about that? :(');
