@@ -73,8 +73,12 @@
 
   <script>
     let klickZaehler = 0;
+    let letzterSprung = 0;
     
-    function wieOftNein() {
+    function wieOftNein(event) {
+      const jetzt = Date.now();
+      if (jetzt - letzterSprung < 200) {return;}
+      letzterSprung = jetzt;
       
       klickZaehler++;
       console.log("Anzahl Versuche:", klickZaehler);
@@ -96,13 +100,17 @@
       neinButton.style.top = y + 'px';
       neinButton.style.zIndex = '1000';
 
-      if (klickZaehler >= 15) {
+      if (klickZaehler >= 8) {
         alert('DAS WAR\'S JETZT!! :(');
         neinButton.style.left = '-2000px';
         neinButton.style.transition = 'all 1s ease-in';
         return;
       }
-             
+
+      const texte = [ "TRY ME, MF!", "Wirklich?", "YOU'RE TOO SLOW", "HÖR DOCH AUF DU HUSO", "Warum? :(", "VERSUCH ES DOCH HAHAHAHA", "Denk nochmal nach", "FUCK YOU"];
+      let textIndex = klickZaehler;
+      neinBtn.innerHTML = texte[textIndex];
+     
       if (klickZaehler === 1) {
         alert('U sure about that? :(');
          neinButton.innerHTML = 'Ganz sicher?';
@@ -110,7 +118,7 @@
         neinButton.innerHTML = 'TRY ME, MF!';
       }
 
-      let neueGroesse = 1 + klickZaehler * 0.15;
+      let neueGroesse = 1 + klickZaehler * 0.2;
       jaButton.style.transform = `scale(${neueGroesse})`;
       }
       
