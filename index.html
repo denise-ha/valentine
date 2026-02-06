@@ -138,13 +138,13 @@
       function jaGeklickt() {
         alert("That's what I thought, bitch :^)");
 
-        car defaults = {
+        var defaults = {
           spread: 360,
           ticks: 100,
           gravity: 0,
-          decay: 0,94,
+          decay: 0.94,
           startVelocity: 30,
-          shapes: ['hearts']
+          shapes: ['heart'],
           colors: ['#C90C54', '#F0357A', '#FDE7EF', '#D60444']
       };
 
@@ -156,7 +156,7 @@
 
         confetti({
           ...defaults,
-          particleCount: 25
+          particleCount: 25,
             scalar: 3
     });
 
@@ -175,9 +175,9 @@
     <div class="heart">&lt;3</div>
     <img src="IMG20250412222010.jpg" alt="Mein Bild">
     <div class="button-container">
-    <button id="jaBtn" class="button">Yes! &lt;3</button> 
+    <button id="jaBtn" class="button" onlick="jaGeklickt()">Yes! &lt;3</button> 
     <button id="neinBtn" class="button" onmouseover="wieOftNein()" onclick="wieOftNein()">No! :(</button>
-    </div>
+    </div> 
   </body>
 
 </html>
