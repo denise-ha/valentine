@@ -79,10 +79,16 @@
       neinButton.style.top = y + 'px';
       neinButton.style.zIndex = '1000';
 
+      if (klickZaehler &geq 7) {
+        alert('DAS WAR\'S JETZT!! :(');
+        nein.Button.style.left = '-2000px';
+        neinButton.style.transition = 'all 1s ease-in';
+      }
+             
       if (klickZaehler === 1) {
         alert('U sure about that? :(');
-              neinButton.innerHTML = 'Ganz sicher?';
-      } else {
+         neinButton.innerHTML = 'Ganz sicher?';
+      } if else {
         neinButton.innerHTML = 'TRY ME, MF!';
       }
 
