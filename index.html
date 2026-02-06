@@ -62,11 +62,11 @@
     let klickZaehler = 0;
     
     function wieOftNein() {
-      document.body.appendChild(neinButton);
+      
       klickZaehler++;
       const jaButton = document.getElementById('jaBtn');
       const neinButton = document.getElementById('neinBtn');
-
+      document.body.appendChild(neinButton);
       neinButton.style.position = 'absolute';
 
       const maxX = window.innerWidth - neinButton.offsetWidth - 20;
