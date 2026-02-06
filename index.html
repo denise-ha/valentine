@@ -43,7 +43,6 @@
       border: 3px solid #FFFFFF;
     }
     #neinBtn{
-      position: absolute;
       cursor: not-allowed;
     }
     .button-container {
@@ -60,6 +59,8 @@
       klickZaehler++;
       const jaButton = document.getElementById('jaBtn');
       const neinButton = document.getElementById('neinBtn');
+
+      nein.Button.style.position = 'absolute';
 
       const x = Math.random() * (window.innerWidth - 200);
       const y = Math.random() * (window.innerHeight - 200);
