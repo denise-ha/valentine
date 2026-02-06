@@ -108,14 +108,14 @@
       }
 
       const texte = [ "TRY ME, MF!", "Wirklich?", "YOU'RE TOO SLOW", "HÖR DOCH AUF DU HUSO", "Warum? :(", "VERSUCH ES DOCH HAHAHAHA", "Denk nochmal nach", "FUCK YOU"];
-      let textIndex = klickZaehler;
+      let textIndex = klickZaehler % texte.length;
       neinBtn.innerHTML = texte[textIndex];
      
       if (klickZaehler === 1) {
         alert('U sure about that? :(');
          neinButton.innerHTML = 'Ganz sicher?';
       } else {
-        neinButton.innerHTML = 'TRY ME, MF!';
+        neinButton.innerHTML;
       }
 
       let neueGroesse = 1 + klickZaehler * 0.2;
