@@ -60,8 +60,9 @@
 
   <script>
     let klickZaehler = 0;
-    document.body.appendChild(neinButton);
+    
     function wieOftNein() {
+      document.body.appendChild(neinButton);
       klickZaehler++;
       const jaButton = document.getElementById('jaBtn');
       const neinButton = document.getElementById('neinBtn');
@@ -79,7 +80,7 @@
       neinButton.style.top = y + 'px';
       neinButton.style.zIndex = '1000';
 
-      if (klickZaehler &geq 7) {
+      if (klickZaehler >= 7) {
         alert('DAS WAR\'S JETZT!! :(');
         nein.Button.style.left = '-2000px';
         neinButton.style.transition = 'all 1s ease-in';
@@ -88,7 +89,7 @@
       if (klickZaehler === 1) {
         alert('U sure about that? :(');
          neinButton.innerHTML = 'Ganz sicher?';
-      } if else {
+      } else {
         neinButton.innerHTML = 'TRY ME, MF!';
       }
 
