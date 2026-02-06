@@ -50,6 +50,13 @@
       font-family: Garamond, serif;
       border: 3px solid #FFFFFF;
     }
+
+    .button:hover {background-color: #B82149}
+    .button:active {
+      background-color: #B82149;
+      box-shadow: 0 3px #666;
+      transform: translateY(2px); 
+    }
     
     #neinBtn{
       cursor: not-allowed;
@@ -122,7 +129,7 @@
          neinButton.innerHTML = 'Ganz sicher?';
       } 
 
-      let neueGroesse = 1 + klickZaehler * 0.2;
+      let neueGroesse = 1 + klickZaehler * 0.5;
       jaButton.style.transform = `scale(${neueGroesse})`;
       }
       
