@@ -76,6 +76,8 @@
     let letzterSprung = 0;
     
     function wieOftNein(event) {
+      if (spielVorbei) return; 
+      
       const jetzt = Date.now();
       if (jetzt - letzterSprung < 200) {return;}
       letzterSprung = jetzt;
@@ -100,7 +102,8 @@
       neinButton.style.top = y + 'px';
       neinButton.style.zIndex = '1000';
 
-      if (klickZaehler >= 8) {
+      if (klickZaehler >= 9) {
+        spielVorbei = true;
         alert('DAS WAR\'S JETZT!! :(');
         neinButton.style.left = '-2000px';
         neinButton.style.transition = 'all 1s ease-in';
@@ -114,9 +117,7 @@
       if (klickZaehler === 1) {
         alert('U sure about that? :(');
          neinButton.innerHTML = 'Ganz sicher?';
-      } else {
-        neinButton.innerHTML;
-      }
+      } 
 
       let neueGroesse = 1 + klickZaehler * 0.2;
       jaButton.style.transform = `scale(${neueGroesse})`;
