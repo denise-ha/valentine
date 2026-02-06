@@ -67,10 +67,13 @@
       const neinButton = document.getElementById('neinBtn');
 
       neinButton.style.position = 'absolute';
-      const padding = 150;
 
-      const x = Math.random() * (window.innerWidth - padding*2) + padding;
-      const y = Math.random() * (window.innerHeight - padding*2) + padding;
+      const maxX = window.innerWidth - neinButton.offsetWidth - 20;
+      const maxY = window.innerHeight - neinButton.offsetHeight -20;
+   
+
+      const x = Math.random() * maxX;
+      const y = Math.random() * maxY;
 
       neinButton.style.left = x + 'px';
       neinButton.style.top = y + 'px';
