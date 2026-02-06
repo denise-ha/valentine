@@ -64,8 +64,11 @@
     function wieOftNein() {
       
       klickZaehler++;
+      console.log("Anzahl Versuche:", klickZaehler);
+      
       const jaButton = document.getElementById('jaBtn');
       const neinButton = document.getElementById('neinBtn');
+      
       document.body.appendChild(neinButton);
       neinButton.style.position = 'absolute';
 
