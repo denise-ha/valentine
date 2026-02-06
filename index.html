@@ -121,7 +121,7 @@
       }
 
       const texte = [ "TRY ME, MF!", "Wirklich?", "YOU'RE TOO SLOW", "HÖR DOCH AUF DU HUSO", "Warum? :(", "VERSUCH ES DOCH HAHAHAHA", "Denk nochmal nach", "FUCK YOU"];
-      let textIndex = klickZaehler % texte.length;
+      let textIndex = (klickZaehler -1) % texte.length;
       neinBtn.innerHTML = texte[textIndex];
      
       if (klickZaehler === 1) {
