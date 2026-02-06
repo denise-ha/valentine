@@ -105,8 +105,10 @@
       if (klickZaehler >= 9) {
         spielVorbei = true;
         alert('DAS WAR\'S JETZT!! :(');
-        neinButton.style.left = '-2000px';
-        neinButton.style.transition = 'all 1s ease-in';
+        neinButton.style.transition = 'all 1.5s ease-in';
+        setTimeout(() => {
+          neinButton.style.left = (window.innerWidth + 600) + 'px';
+        }, 10);
         return;
       }
 
