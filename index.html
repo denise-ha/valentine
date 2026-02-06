@@ -68,12 +68,12 @@
       
       const jaButton = document.getElementById('jaBtn');
       const neinButton = document.getElementById('neinBtn');
-      
+
       document.body.appendChild(neinButton);
       neinButton.style.position = 'absolute';
 
-      const maxX = window.innerWidth - neinButton.offsetWidth - 20;
-      const maxY = window.innerHeight - neinButton.offsetHeight -20;
+      const maxX = Math.max(0, window.innerWidth - neinButton.offsetWidth - 20);
+      const maxY = Math.max(0, window.innerHeight - neinButton.offsetHeight -20);
    
 
       const x = Math.random() * maxX;
